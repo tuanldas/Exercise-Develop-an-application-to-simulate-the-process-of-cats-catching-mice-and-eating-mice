@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Phát triển ứng dụng mô phỏng lại quá trình mèo bắt chuột và ăn chuột.</title>
+</head>
+<body>
+<script>
+    var Rat = function (name, kg, living, death) {
+        this.name = name;
+        this.kg = 2;
+        this.speed = null;
+        this.living = living;
+        this.death = death;
+
+        this.setSpeed = function (_speed) {
+            this.setSpeed = _speed;
+        };
+
+        this.getSpeed = function () {
+            return this.setSpeed
+        };
+
+        this.sounding = function () {
+            alert("chít chít")
+        };
+    };
+
+    var Cat = function (name2, kg2,speed5 ) {
+        this.name2 = name2;
+        this.kg2 = 7;
+        this.speedmax = null;
+        this.speed5 = null;
+        this.kg = 2;
+
+        this.setSpeed = function (_speed) {
+            this.setSpeed = _speed;
+        };
+
+        this.getSpeed = function () {
+            return this.setSpeed;
+        };
+
+        var x = this.getSpeed;
+        this.setSpeed2 = function (_speed2) {
+            this.setSpeed2 = _speed2;
+        };
+
+        var u = this.getSpeed2;
+
+        this.getSpeed2 = function () {
+            return this.setSpeed2;
+        };
+
+        this.sounding = function () {
+            alert("meo meo")
+        };
+
+        this.catchTheMouse = function () {
+            if (this.getSpeed2() < this.getSpeed()) {
+                alert("bắt được chuột dồi ăn thôi");
+                alert("sau khi ăn cân nặng tăng    "    + this.weightIncrease())
+            }else {
+                alert("chuột chạy nhanh quá")
+            }
+        };
+
+        this.weightIncrease = function () {
+            return this.kg + this.kg2;
+        };
+    };
+
+
+    var rat = new Rat("White mouse", 2,);
+    var rat2 = prompt("nhâp tốc độ của mèo");
+    var cat = new Cat("black cat", 3);
+    var cat2 = prompt("nhập tốc độ của chuột để bắt đầu chơi");
+    cat.setSpeed2(cat2);
+    cat.setSpeed(rat2);
+
+    function sta() {
+        cat.catchTheMouse()
+    }
+
+    function theRatCries() {
+        rat.sounding()
+    }
+
+    function miaow() {
+        cat.sounding()
+    }
+</script>
+<button type="button" onclick="theRatCries()">the rat Cries</button>
+<button type="button" onclick="miaow()">miaow</button>
+<button type="button" onclick="sta()">aaâ</button>
+</body>
+</html>
